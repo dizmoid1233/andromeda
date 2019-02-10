@@ -14,7 +14,7 @@ session_start();
         <form method="post">
             <div class="bottom">
                 <input class="user" type="text" placeholder="Username" name="uname" required>
-                <input class="psd" type="text" placeholder="Password" name="pword" size="25" required>
+                <input class="psd" type="password" placeholder="Password" name="pword" size="25" required>
                 <button class="login" type="submit">Sign in</button>
             </div>
         </form>
