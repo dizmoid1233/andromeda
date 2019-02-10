@@ -21,6 +21,6 @@
     header('Location: ../sub/test.html');
         }
     else{
-    echo 'false';
+    header('Location: ../index.php');
     }
 ?>
