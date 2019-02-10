@@ -28,7 +28,7 @@ session_start();
         $mysqli_db_database = "andromeda";
         $con = mysqli_connect($mysqli_db_hostname, $mysqli_db_user, $mysqli_db_password, $mysqli_db_database)
         or die("Could not connect database");
-        mysqli_select_db($mysqli_db_database, $con)or die("Could not select database");
+        mysqli_select_db($con, $mysqli_db_database)or die("Could not select database");
 
         $query = "SELECT * FROM users WHERE name='$username' AND password='$password'";
         $result = mysqli_query($query)or die(mysqli_error());
