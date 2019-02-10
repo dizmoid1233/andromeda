@@ -16,7 +16,7 @@
     mysqli_select_db($con, $mysqli_db_database)or die("Could not select database");
 
     $query = "SELECT * FROM users WHERE name='$username' AND password='$password'";
-    print_r($query)
+    print_r($query);
     $result = mysqli_query($query)or die(mysqli_error());
     $num_row = mysqli_num_rows($result);
     $row=mysqli_fetch_array($result);
