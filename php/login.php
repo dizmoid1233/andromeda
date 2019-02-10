@@ -1,12 +1,7 @@
 <?php
     session_start();
-    ini_set('display_errors',1);
-    error_reporting(E_ALL|E_STRICT);
-    echo 'yo man';
-    print_r($_POST['uname']);
-    print_r($_POST['pword']);
     $username = $_POST['uname'];
-    $password = $_POST['pword'];
+    $password = md5($_POST['pword']);
     $mysqli_db_hostname = "localhost";
     $mysqli_db_user = "andromeda";
     $mysqli_db_password = "Forsaken2019!";
