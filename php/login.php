@@ -17,7 +17,7 @@
 
     $query = "SELECT * FROM users WHERE name='$username' AND password='$password'";
     print_r($query);
-    $result = mysqli_query($con, $query)or die(mysqli_error());
+    $result = mysqli_query($con, $query)or die(mysqli_error($con));
     $num_row = mysqli_num_rows($result);
     $row=mysqli_fetch_array($result);
     if( $num_row >=1 ) { 
