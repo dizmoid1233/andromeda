@@ -17,6 +17,7 @@
     if( $num_row >=1 ) { 
     echo 'true';
     $_SESSION['user_name']=$row['uname'];
+    header('Location: sub/test.html');
     }
     else{
     echo 'false';
