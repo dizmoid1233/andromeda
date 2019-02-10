@@ -15,7 +15,7 @@
     or die("Could not connect database");
     mysqli_select_db($con, $mysqli_db_database)or die("Could not select database");
 
-    $query = "SELECT * FROM users WHERE name='$username' AND password='$password'";
+    $query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
     print_r($query);
     $result = mysqli_query($con, $query)or die(mysqli_error($con));
     $num_row = mysqli_num_rows($result);
