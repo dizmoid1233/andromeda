@@ -1,5 +1,6 @@
 <?php
     session_start();
+    echo 'yo man';
     $username = $_POST['uname'];
     $password = $_POST['pword'];
     $mysqli_db_hostname = "localhost";
