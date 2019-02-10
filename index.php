@@ -11,7 +11,7 @@ session_start();
         <div class="top">
             <p>Sign in to Andromeda</p>
         </div>
-        <form method="post" action="php/login.php">
+        <form action="php/login.php" method="post">
             <div class="bottom">
                 <input class="user" type="text" placeholder="Username" name="uname" required>
                 <input class="psd" type="password" placeholder="Password" name="pword" size="25" required>
