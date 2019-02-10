@@ -21,16 +21,16 @@ session_start();
     </body>
     <?php
         $username = $_POST['uname'];
-        $password = md5($_POST['pword']);
-        $mysql_db_hostname = "localhost";
-        $mysql_db_user = "andromeda";
-        $mysql_db_password = "Forsaken2019!";
-        $mysql_db_database = "andromeda";
-        $con = mysqli_connect($mysql_db_hostname, $mysql_db_user, $mysql_db_password)
+        $password = $_POST['pword'];
+        $mysqli_db_hostname = "localhost";
+        $mysqli_db_user = "andromeda";
+        $mysqli_db_password = "Forsaken2019!";
+        $mysqli_db_database = "andromeda";
+        $con = mysqli_connect($mysqli_db_hostname, $mysqli_db_user, $mysqli_db_password, $mysqli_db_database)
         or die("Could not connect database");
-        mysqli_select_db($mysql_db_database, $con)or die("Could not select database");
+        mysqli_select_db($mysqli_db_database, $con)or die("Could not select database");
 
-        $query = "SELECT * FROM registered_users WHERE name='$username' AND password='$password'";
+        $query = "SELECT * FROM users WHERE name='$username' AND password='$password'";
         $result = mysqli_query($query)or die(mysqli_error());
         $num_row = mysqli_num_rows($result);
         $row=mysqli_fetch_array($result);
