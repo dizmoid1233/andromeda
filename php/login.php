@@ -3,6 +3,8 @@
     ini_set('display_errors',1);
     error_reporting(E_ALL|E_STRICT);
     echo 'yo man';
+    print_r($_POST['uname']);
+    print_r($_POST['pword']);
     $username = $_POST['uname'];
     $password = $_POST['pword'];
     $mysqli_db_hostname = "localhost";
