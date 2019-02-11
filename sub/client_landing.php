@@ -1,5 +1,6 @@
 <?php
-    $username = $_SESSION['username'];
+    $username = $_COOKIE['usrinfo'];
+    echo $username;
     $mysqli_db_hostname = "localhost";
     $mysqli_db_user = "andromeda";
     $mysqli_db_password = "Forsaken2019!";
