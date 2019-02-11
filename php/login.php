@@ -23,7 +23,7 @@
             header('Location: ../sub/admin_panel.html');
         }
         else {
-            header('Location: ../sub/client_landing.html');
+            header('Location: ../sub/client_landing.php');
         }
     }
     else {
