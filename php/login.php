@@ -21,7 +21,7 @@
         $num_row = mysqli_num_rows($result);
         $row=mysqli_fetch_array($result);
         if( $num_row = 1 ) {
-            header('Location: ../sub/client_landing.html');
+            header('Location: ../sub/admin_landing.html');
         }
         else {
             header('Location: ../sub/client_landing.html');
