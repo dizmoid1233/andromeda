@@ -16,10 +16,11 @@
     $row=mysqli_fetch_array($result);
     if( $num_row >=1 ) { 
         $_SESSION['username']=$row['uname'];
-        $query_admin = "SELECT * FROM users WHERE username='$username' AND password='$password' AND admin=1";
+        $query_admin = "SELECT admin FROM users WHERE username='$username' AND password='$password'";
         $result = mysqli_query($con, $query_admin) or die (mysqli_error($con));
         $num_row = mysqli_num_rows($result);
         $row=mysqli_fetch_array($result);
+        print_r($result);
         if( $num_row = 1 ) {
             header('Location: ../sub/admin_panel.html');
         }
