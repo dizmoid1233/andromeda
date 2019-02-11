@@ -19,7 +19,7 @@
         $query_admin = "SELECT admin FROM users WHERE username='$username'";
         $result = mysqli_query($con, $query_admin) or die (mysqli_error($con));
         $row = $result->fetch_assoc();
-        if( $row = 1 ) {
+        if( $row['admin'] == 1 ) {
             header('Location: ../sub/admin_panel.html');
         }
         else {
