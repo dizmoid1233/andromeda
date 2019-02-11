@@ -16,7 +16,7 @@
     $row=mysqli_fetch_array($result);
     if( $num_row >=1 ) { 
         $_SESSION['username']=$row['uname'];
-        $query_admin = "SELECT admin FROM users WHERE username='$username' AND password='$password'";
+        $query_admin = "SELECT username, admin FROM users WHERE username='$username' AND admin=1";
         $result = mysqli_query($con, $query_admin) or die (mysqli_error($con));
         $num_row = mysqli_num_rows($result);
         $row=mysqli_fetch_array($result);
