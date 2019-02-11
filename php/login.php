@@ -11,14 +11,13 @@
     mysqli_select_db($con, $mysqli_db_database)or die("Could not select database");
 
     $query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
-    print_r($query);
     $result = mysqli_query($con, $query)or die(mysqli_error($con));
     $num_row = mysqli_num_rows($result);
     $row=mysqli_fetch_array($result);
     if( $num_row >=1 ) { 
     echo 'true';
-    $_SESSION['user_name']=$row['uname'];
-    header('Location: ../sub/test.html');
+    $_SESSION['username']=$row['uname'];
+    header('Location: ../sub/client_landing.html');
         }
     else{
     header('Location: ../index.php');
