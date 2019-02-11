@@ -18,8 +18,8 @@
         $_SESSION['username']=$row['uname'];
         $query_admin = "SELECT admin FROM users WHERE username='$username'";
         $result = mysqli_query($con, $query_admin) or die (mysqli_error($con));
-        echo $query_admin;
-        print_r($result);
+        $row = $result->fetch_assoc();
+        echo $row["admin"];
         //if( $num_row = 1 ) {
             // header('Location: ../sub/admin_panel.html');
           //  print_r($result);
