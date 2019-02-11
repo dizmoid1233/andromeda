@@ -13,5 +13,6 @@
     $result = mysqli_query($con, $query)or die(mysqli_error($con));
     $num_row = mysqli_num_rows($result);
     $row=mysqli_fetch_array($result);
-    print_r($row)
+    print_r($row);
+    header('Location: ../sub/client_landing.html');
 ?>
