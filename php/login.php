@@ -15,10 +15,16 @@
     $num_row = mysqli_num_rows($result);
     $row=mysqli_fetch_array($result);
     if( $num_row >=1 ) { 
-        echo 'true';
         $_SESSION['username']=$row['uname'];
         $query_admin = "SELECT admin FROM users WHERE username='$username'";
         print_r($query_admin);
+        unset($result);
+        unset($num_row);
+        unset ($row);
+        $result = mysqli_query($con, $query_admin) or die (mysqli_error($con));
+        print_r($result);
+        $num_row = mysqli_num_rows($result);
+        $row=mysqli_fetch_array($result);
     }
     else {
         header('Location: ../index.php');
