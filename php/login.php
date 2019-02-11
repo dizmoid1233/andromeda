@@ -20,12 +20,17 @@
         $result = mysqli_query($con, $query_admin) or die (mysqli_error($con));
         $num_row = mysqli_num_rows($result);
         $row=mysqli_fetch_array($result);
-        print_r($result);
         if( $num_row = 1 ) {
-            header('Location: ../sub/admin_panel.html');
+            // header('Location: ../sub/admin_panel.html');
+            print_r($result);
+            print_r($num_row);
+            echo 'admin';
         }
         else {
-            header('Location: ../sub/client_landing.html');
+            // header('Location: ../sub/client_landing.html');
+            print_r($result);
+            print_r($num_row);
+            echo 'client';
         }
     }
     else {
