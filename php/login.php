@@ -25,7 +25,7 @@
         print_r($result);
         $num_row = mysqli_num_rows($result);
         $row=mysqli_fetch_array($result);
-        if( $num_row >=1 ) {
+        if( $num_row = 1 ) {
             echo true;
         }
         else {
