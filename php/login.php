@@ -27,10 +27,10 @@
         $row=mysqli_fetch_array($result);
         if( $num_row >=1 ) {
             echo true;
-            header('Location: ../sub/client_landing.html');
         }
         else {
             echo false;
+            header('Location: ../sub/client_landing.html');
         }
     }
     else {
