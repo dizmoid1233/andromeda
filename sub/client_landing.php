@@ -15,9 +15,10 @@
         <title>Your Device</title>
         <div class="header">
             <?php
-                $query = mysqli_query($con, "SELECT device_owner FROM devices WHERE username='$username'");
-                echo $query;
-                $row = $query->fetch_assoc();
+                $query = "SELECT device_owner FROM devices WHERE username='$username'";
+                $result = mysqli_query($con, $query)or die(mysqli_error($con));
+                $row = $result->fetch_assoc();
+                echo $row['device_owner'];
             ?>
             <p class="title"><?php echo $row['device_owner'];?></p>
             <div class="button">
