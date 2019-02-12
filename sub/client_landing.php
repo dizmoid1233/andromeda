@@ -11,6 +11,13 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <?php
+            echo $username;
+            $query = "SELECT * FROM devices WHERE username='$username'";
+            $result = mysqli_query($con, $query)or die(mysqli_error($con));
+            $row = $result->fetch_assoc();
+            echo $result;
+        ?>
         <title>Your Device</title>
         <div class="header">
             <?php
