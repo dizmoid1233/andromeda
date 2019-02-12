@@ -35,8 +35,11 @@
             echo $result;
         ?>
         <div class="card">
-            <?php echo $row['device_name'];
-                  echo $row['device_model']; ?>
+            <?php 
+                echo '<table>';
+                echo '<th>' . $row['device_name'] . '</th>';
+                echo '</table>';
+            ?>
         </div>
     </body>
 </html>
