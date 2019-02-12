@@ -57,7 +57,46 @@ div.card {
     color: #000000;
     font-size: 14px;
     margin: 10px;
-    padding: 10px;
+    padding: 15px;
     height: auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+h1.device_name {
+    color: #546e7a;
+    font-size: 24px;
+    text-align: left;
+}
+
+h2.subtitle {
+    color: #546e7a;
+    font-size: 18px;
+    text-align: left;
+}
+
+.wrapper {
+    width: 500px;
+}
+
+div.progress_border {
+    background: #f5f5f5;
+    border-color: #f5f5f5;
+    border-width: 1px;
+    width: 100%;
+}
+
+div.progress_fill {
+    background: #546e7a;
+    display: block;
+    padding: 3px;
+    color: #FFFFFF;
+}
+
+p.progress_text {
+    text-align: center;
+}
+
+p.body {
+    color: #000000;
+    font-size: 14px;
 }
