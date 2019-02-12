@@ -33,7 +33,7 @@
         <div class="card">
             <p>whack</p>
             <table>
-                <th><?php echo "wack";?></th>
+                <th><?php $row['device_name']?></th>
             </table>
         </div>
     </body>
