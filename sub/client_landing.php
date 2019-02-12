@@ -1,6 +1,5 @@
 <?php
     $username = $_COOKIE['usrinfo'];
-    echo $username;
     $mysqli_db_hostname = "localhost";
     $mysqli_db_user = "andromeda";
     $mysqli_db_password = "Forsaken2019!";
@@ -20,7 +19,8 @@
                 $row = $result->fetch_assoc();
                 echo $row['device_owner'];
             ?>
-            <p class="title"><?php echo $row['device_owner'];?></p>
+            <p class="title">yote</p>
+            <?php echo $row['device_owner'];?>
             <div class="button">
                 <p class="button"><a class="header">Log out</a></p>
             </div>
@@ -28,8 +28,14 @@
         <link href="../css/main.css" type="text/css" rel="stylesheet">
     </head>
     <body>
+        <?php
+            $query = "SELECT * FROM devices WHERE username='$username'";
+            $result = mysqli_query($con, $query)or die(mysqli_error($con));
+            $row = $result->fetch_assoc();
+        ?>
         <div class="card">
-            <p>Client landing page</p>
+            <?php echo $row['device_name'];
+                  echo $row['device_model']; ?>
         </div>
     </body>
 </html>
