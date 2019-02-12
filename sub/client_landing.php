@@ -32,6 +32,7 @@
             $query = "SELECT * FROM devices WHERE username='$username'";
             $result = mysqli_query($con, $query)or die(mysqli_error($con));
             $row = $result->fetch_assoc();
+            echo $result;
         ?>
         <div class="card">
             <?php echo $row['device_name'];
