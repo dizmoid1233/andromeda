@@ -15,17 +15,13 @@
             echo $username;
             $query = "SELECT * FROM devices WHERE username='$username'";
             $result = mysqli_query($con, $query)or die(mysqli_error($con));
-            $row = $result->fetch_assoc();
-            echo $result;
+            while ($row = $result->fetch_assoc()) {
+                echo $row["device_name"]
+            }
+            echo $row['device_name'];
         ?>
         <title>Your Device</title>
         <div class="header">
-            <?php
-                $query = "SELECT device_owner FROM devices WHERE username='$username'";
-                $result = mysqli_query($con, $query)or die(mysqli_error($con));
-                $row = $result->fetch_assoc();
-                echo $row['device_owner'];
-            ?>
             <p class="title">yote</p>
             <?php echo $row['device_owner'];?>
             <div class="button">
@@ -35,12 +31,6 @@
         <link href="../css/main.css" type="text/css" rel="stylesheet">
     </head>
     <body>
-        <?php
-            $query = "SELECT * FROM devices WHERE username='$username'";
-            $result = mysqli_query($con, $query)or die(mysqli_error($con));
-            $row = $result->fetch_assoc();
-            echo $result;
-        ?>
         <div class="card">
             <p>whack</p>
             <table>
