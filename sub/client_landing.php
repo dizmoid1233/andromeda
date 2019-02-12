@@ -12,7 +12,6 @@
 <html>
     <head>
         <?php
-            echo $username;
             $query = "SELECT * FROM devices WHERE username='$username'";
             $result = mysqli_query($con, $query)or die(mysqli_error($con));
             while ($row = $result->fetch_assoc()) {
@@ -34,7 +33,7 @@
         <div class="card">
             <p>whack</p>
             <table>
-                <th><?=$row['device_name']?></th>
+                <th><?php echo "wack";?></th>
             </table>
         </div>
     </body>
