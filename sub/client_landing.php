@@ -16,7 +16,7 @@
             $query = "SELECT * FROM devices WHERE username='$username'";
             $result = mysqli_query($con, $query)or die(mysqli_error($con));
             while ($row = $result->fetch_assoc()) {
-                echo $row["device_name"]
+                echo $row["device_name"];
             }
             echo $row['device_name'];
         ?>
