@@ -28,7 +28,7 @@
     <body>
         <?php
             $username = $_COOKIE['usrinfo'];
-            $sql = "SELECT * FROM users where username=$username";
+            $sql = "SELECT * FROM devices where username=$username";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
