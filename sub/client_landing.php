@@ -27,7 +27,7 @@
     </head>
     <body>
         <?php
-            $username = $_COOKIE('usrinfo');
+            $username = $_COOKIE['usrinfo'];
             $sql = "SELECT * FROM users where username=$username";
             $result = $conn->query($sql);
 
@@ -41,7 +41,7 @@
             $conn->close();
         ?>
         <div class="card">
-            <p>this is a test of my nan</p>
+            <p>Does this work?</p>
             <p><?php echo $row['device_owner']?></p>
         </div>
     </body>
